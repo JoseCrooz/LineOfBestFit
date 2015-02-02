@@ -1,0 +1,63 @@
+/*Shared HTML5 Interactive User Interface Elements*/
+canvas {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+/*Module container*/
+#html5module {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    border:1px solid;
+    border-color: #999;
+    box-shadow: 5px 5px 4px #EEE;
+    background-color: #FFF;
+    text-shadow: none;
+}
+
+/*Sapling logo*/
+#logo {
+    position: absolute;
+    width:150px;
+    height:48px;
+    top:10px;
+    left:645px;
+    background-image: url('../img/SaplingLearning_logo_small.png');
+    /*Image set for higher density displays*/
+    background-image: -webkit-image-set( url(../img/SaplingLearning_logo_small.png) 1x, 
+                                        url(../img/SaplingLearning_logo_2x.png) 2x);
+}
+
+/*Help message text box*/
+.help-text {
+    position: relative;
+    visibility: hidden;
+    top: 100px;
+    left: 25px;
+    width: 300px;
+    border: 1px #999 solid;
+    background-color:#FFFFE5;
+    padding:12px 16px 16px 16px;
+    border-radius: 8px;
+    font: 14px Arial, Helvetica, sans-serif;
+    text-align: left;
+    z-index: 10;
+    cursor: default;
+}
+
+/* Custom styles for jQuery Mobile components */
+.ui-btn-up-a, .ui-btn-hover-a, .ui-btn-active-a, .ui-controlgroup-label{
+    font-weight:normal;
+}
+.ui-overlay-c {
+    text-shadow:none;
+}
+/*if using dark theme - set background color to Sapling blue
+.ui-checkbox-on, .ui-radio-on{
+    background-image:none;
+    background-color: #00859e;
+}*/
+.ui-page {
+    background: #FFFFFF;
+}

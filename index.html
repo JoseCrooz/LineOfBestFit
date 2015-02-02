@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Line of Best Fit</title>
+    <link rel="stylesheet" href="css/jquery.mobile-1.3.2.min.css" /> 
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/ui.css" /> 
+</head>
+
+<body>
+<div id="html5module">
+    <div id="lab">
+        <img src="img/sapling-logo.jpg" id="logo" />
+        <!-- Canvas object -->
+        <canvas id="graph" height="481" width="481"></canvas>
+        <!-- end Canvas object -->
+        
+        <div id="leftElements" class="clearfix">
+            <!-- Point Table -->
+            <div id="pointTable" class="clearfix">
+                <div id="top-row" class="clearfix">
+                    <div class="list-header">x</div>
+                    <div class="list-header">y</div>    
+                </div>
+                <div id="pointsHolder">
+                    <!--<div class="point-item clearfix">
+                        <div class="deleteBtn">Delete</div>
+                        <div class="vert"></div>
+                        <div class="coord"><span class="coord-num"></span></div>
+                        <div class="coord"><span class="coord-num"></span></div>
+                    </div>-->
+                </div>
+            </div>
+            <!-- end Point List -->
+            
+            <!-- Answers -->
+            <div id="answerHolder">
+                <!--<div class="answer"><span>y</span> = 0.33x + 110.27</div>
+                <div class="answer">r = 0.48</div>-->
+            </div>
+            <!-- end Answers -->
+        </div>
+        
+        <!-- Keypad -->
+        <div id="keypad">
+            <ul>        
+                <li class="keypadBtn" data-value="7">7</li>
+                <li class="keypadBtn" data-value="8">8</li>
+                <li class="keypadBtn" data-value="9">9</li>
+                <li class="keypadBtn" data-value="4">4</li>
+                <li class="keypadBtn" data-value="5">5</li>
+                <li class="keypadBtn" data-value="6">6</li>
+                <li class="keypadBtn" data-value="1">1</li>
+                <li class="keypadBtn" data-value="2">2</li>
+                <li class="keypadBtn" data-value="3">3</li>
+                <li class="keypadBtn" data-value=".">&#46;</li>
+                <li class="keypadBtn" data-value="0">0</li>
+                <li class="keypadBtn" data-value="-">&#45;</li>
+                <li class="keypadBtn del" data-value="del">Del</li>
+                <li class="keypadBtn enter" data-value="enter">Enter</li>
+            </ul>
+        </div>
+        <!-- end Keypad -->
+        
+        <div id="disabler"></div>
+        
+        <!-- Buttons -->
+        <div id="help-button">
+            <!-- <button id="helpButton" data-role="button" data-inline="true" data-theme="c">Help</button> -->
+            <label id='helpLabel'>
+                  <input type="checkbox" name="help" data-inline="true" id="helpButton" checked="checked" />Help
+            </label>
+        </div>
+        <a href="#" id="newPointButton" data-role="button" data-inline="true">New Point</a>    
+        <a href="#" id="resetButton" data-role="button" data-inline="true">Reset Table</a>
+        <a href="#" id="updateGraphButton" data-role="button" data-inline="true">Update Graph</a>
+        <!-- end Buttons -->
+        
+        <div id="message" class="ui-draggable messagePos1">
+            <span id="messageText">Click "New Point" and use the keypad to enter in a new coordinate into the table. Once at least two coordinates are entered, click "Update Graph" to plot the points and generate the Line of Best Fit, as well as the equation for the line and the data's correlation coefficient. "Reset Table" will clear all points from the table and graph.</span>
+            <!--<button title="close" id="messageCloseButton"></button>-->
+            <!--<img id="messageDragIcon" src="img/drag_finger.png">-->
+        </div>
+        
+        <!--<div class="help-text ui-draggable" id="message">
+            Click "New Point" and use the keypad to enter in a new coordinate into the table. Once at least two coordinates are entered, click "Update Graph" to plot the points and generate the Line of Best Fit, as well as the equation for the line and the data's correlation coefficient. "Reset Table" will clear all points from the table and graph.
+        </div>-->
+        <div class="reset-text" id="reset-message">
+            Are you sure you want to reset the table?
+            <div data-role="controlgroup" data-type="horizontal">
+                <a href="#" data-role="button" id='yes'>Yes</a>
+                <a href="#" data-role="button" id='no'>No</a>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div id="objectives-container">
+        <img src="img/sapling-logo.jpg" id="objective-logo" />
+        <div id="learning-objectives">
+            <h4>Learning Objectives</h4>
+            <br/>
+            <p>The student will demonstrate the ability to create a table of data in order to form a scatterplot.</p>
+            <br/>
+            <p>The student will examine and interpret a dataset's line of best fit equation and correlation coefficient.</p>
+        </div>
+        <br/>
+        <div id="applications">
+            <h4>Real World Applications</h4>
+            <br/>
+            <p>The line of best fit is a way to summarize any set of data using a single linear function. The correlation coefficient gives a measure as to how strongly the data is correlated.</p>
+        </div>
+        <div title="next" id="nextButton"></div>
+        
+    </div>
+</div>
+
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/jquery.mobile-1.3.2.min.js"></script>
+<!--<script src="js/jquery-ui-1.10.3.custom.min.js"></script>-->
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/EventDispatcher.js"></script>
+<script src="js/Graph.js"></script>
+<script src="js/PointList.js"></script>
+<script src="js/Keypad.js"></script>
+<script src="js/App.js"></script>
+<script src="js/lobf.js"></script>
+<!--<script src="js/main.js"></script>-->
+</body>
+</html>
